@@ -5,11 +5,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.apptender2.R
 import com.example.apptender2.view.adapter.tiendaAdapter
+import com.example.apptender2.viewmodel.productosteindaViewModel
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
@@ -22,7 +25,9 @@ import com.google.firebase.ktx.Firebase
 class ListaTiendaFragment : Fragment() {
 
     lateinit var recyclerTiend: RecyclerView
-    private lateinit var firebaseAuth: FirebaseAuth
+    lateinit var firebaseAuth: FirebaseAuth
+    lateinit var adapter: tiendaAdapter
+    private val viewModel by lazy { ViewModelProvider(this).get(productosteindaViewModel:: class.java) }
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -38,11 +43,18 @@ class ListaTiendaFragment : Fragment() {
 
         val view = inflater.inflate(R.layout.fragment_tienda, container, false)
         recyclerTiend = view.findViewById(R.id.recyclerTienda)
-        val adapter = tiendaAdapter()
+        adapter = tiendaAdapter(requireContext())
         recyclerTiend.layoutManager = LinearLayoutManager(context)
-        recyclerTiend.adapter = adapter
+        recyclerTiend.adapter=adapter
+        observeData()
         return view
-    }
+        }
+        fun observeData() {
+        viewModel.libraryData().observe(viewLifecycleOwner,Observer {
+            adapter.setListData(it)
+            adapter.notifyDataSetChanged()
+        })
+        }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

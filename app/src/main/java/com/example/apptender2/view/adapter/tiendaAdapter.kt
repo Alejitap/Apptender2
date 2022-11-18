@@ -1,49 +1,52 @@
 package com.example.apptender2.view.adapter
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.appcompat.view.menu.MenuView.ItemView
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.example.apptender2.R
+import com.example.apptender2.model.productos
+import com.squareup.picasso.Picasso
 
 
-class tiendaAdapter:RecyclerView.Adapter<tiendaAdapter.ViewHolder> (){
 
-    override fun onCreateViewHolder(viewGroup:ViewGroup,int: Int):ViewHolder {
+class tiendaAdapter(private val context: Context):RecyclerView.Adapter<tiendaAdapter.ViewHolder> (){
+
+    private var productolista= mutableListOf<productos>()
+
+    fun setListData(data:MutableList<productos>){
+        productolista=data
+
+    }
+
+    override fun onCreateViewHolder(viewGroup:ViewGroup,i: Int):ViewHolder {
+
         val v=LayoutInflater.from(viewGroup.context).inflate(R.layout.card_view_tienda,viewGroup,false)
         return ViewHolder (v)
     }
-    inner class  ViewHolder (ItemView: View):RecyclerView.ViewHolder(ItemView){
-        var itemImage: ImageView
-        var itemTitle: TextView
-        var itemPrecio  : TextView
-
-        init {
-            itemImage=ItemView.findViewById(R.id.image)
-            itemTitle=ItemView.findViewById(R.id.Title)
-            itemPrecio=ItemView.findViewById(R.id.Precio)
+    inner class  ViewHolder (ItemView: View):RecyclerView.ViewHolder(ItemView) {
+        fun binWew(product:productos) {
+            itemView.findViewById<TextView>(R.id.title).text = product.title
+            itemView.findViewById<TextView>(R.id.Precio).text=product.precio
+            Picasso.with(context).load(product.image).into(itemView.findViewById<ImageView>(R.id.image))
 
         }
     }
-
-
-    val title= arrayOf("Bananos","Fresas","Tomates","Papas","Brocoli","Mango" )
-    val precio= arrayOf("$3.000","$3.900","$2.500", "$1.500","$15.000", "$4500" )
-        val image= arrayOf(R.drawable.banano,R.drawable.fresas,R.drawable.tomate1,R.drawable.papa,R.drawable.brocoli,R.drawable.mango)
-
     override fun onBindViewHolder(viewHolder: ViewHolder, i:Int) {
-        viewHolder.itemTitle.text=title [i]
-        viewHolder.itemPrecio.text=precio [i]
-        viewHolder.itemImage.setImageResource(image[i])
-
+        val product=productolista[i]
+        viewHolder.binWew(product)
     }
 
     override fun getItemCount(): Int {
-        return title.size
+        return if(productolista.size>0){
+            productolista.size
+        }else {
+            0
+        }
 
     }
 }
