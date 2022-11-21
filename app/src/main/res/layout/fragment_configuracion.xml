@@ -55,7 +55,7 @@
             android:textSize="18dp"></TextView>
 
         <EditText
-            android:id="@+id/correo"
+            android:id="@+id/correo2"
             android:layout_width="345dp"
             android:layout_height="50dp"
             android:layout_marginLeft="28dp"
@@ -139,7 +139,7 @@
             android:textSize="18dp"></TextView>
 
         <EditText
-            android:id="@+id/correo"
+            android:id="@+id/correo1"
             android:layout_width="345dp"
             android:layout_height="50dp"
             android:layout_marginLeft="28dp"
@@ -198,4 +198,16 @@
             app:layout_constraintVertical_bias="0.686" />
 
     </LinearLayout>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/buttonnavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="700dp"
+        android:background="@color/colorsecundario"
+        android:backgroundTint="@color/white"
+        app:itemIconTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/menu_navigation_bar"
+        tools:ignore="MissingConstrains">
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
 </FrameLayout>
