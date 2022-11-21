@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".configuracionFragment">
 
     <LinearLayout
@@ -32,6 +33,169 @@
 
         </RelativeLayout>
 
+        <TextView
+            android:id="@+id/configuración"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_marginLeft="28dp"
+            android:layout_marginTop="30dp"
+            android:text="Información de tu tienda"
+            android:textColor="@color/coloracento"
+            android:textSize="23dp"
+            android:textStyle="bold"></TextView>
+
+        <TextView
+            android:id="@+id/configuración1"
+            android:layout_width="235dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="28dp"
+            android:layout_marginTop="5dp"
+            android:text="Correo electrónico"
+            android:textColor="@color/colorletra"
+            android:textSize="18dp"></TextView>
+
+        <EditText
+            android:id="@+id/correo"
+            android:layout_width="345dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="28dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/stylo_borde_editext"
+            android:ems="10"
+            android:fontFamily="@font/opensanslight"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.433" />
+
+        <TextView
+            android:id="@+id/configuración2"
+            android:layout_width="235dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="28dp"
+            android:layout_marginTop="10dp"
+            android:text="País"
+            android:textColor="@color/colorletra"
+            android:textSize="18dp"></TextView>
+
+        <EditText
+            android:id="@+id/país"
+            android:layout_width="345dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="28dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/stylo_borde_editext"
+            android:ems="10"
+            android:fontFamily="@font/opensanslight"
+            android:hint="País"
+            android:inputType="textEmailAddress"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.433" />
+
+        <TextView
+            android:id="@+id/configuración3"
+            android:layout_width="235dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="28dp"
+            android:layout_marginTop="10dp"
+            android:text="Ciudad"
+            android:textColor="@color/colorletra"
+            android:textSize="18dp"></TextView>
+
+        <EditText
+            android:id="@+id/correo"
+            android:layout_width="345dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="28dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/stylo_borde_editext"
+            android:ems="10"
+            android:fontFamily="@font/opensanslight"
+            android:hint="Ciudad"
+            android:inputType="textEmailAddress"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.433" />
+
+        <TextView
+            android:id="@+id/configuración4"
+            android:layout_width="235dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="28dp"
+            android:layout_marginTop="10dp"
+            android:text="Dirección de residencia"
+            android:textColor="@color/colorletra"
+            android:textSize="18dp"></TextView>
+
+        <EditText
+            android:id="@+id/correo"
+            android:layout_width="345dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="28dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/stylo_borde_editext"
+            android:ems="10"
+            android:fontFamily="@font/opensanslight"
+            android:hint="Dirección"
+            android:inputType="textEmailAddress"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.433" />
+
+        <TextView
+            android:id="@+id/configuración5"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="28dp"
+            android:layout_marginTop="10dp"
+            android:text="¿Tienes punto de venta físico?"
+            android:textColor="@color/colorletra"
+            android:textSize="18dp"></TextView>
+
+        <ToggleButton
+            android:id="@+id/toggle"
+            android:layout_width="55dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="28dp"
+            android:background="@color/colorfondo2"
+            android:onClick="onclick"
+            android:layout_marginTop="5dp"
+            android:text="Sí">
+
+        </ToggleButton>
+
+        <Button
+            android:id="@+id/Bguardar"
+            android:layout_width="152dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="130dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/stylo_borde_bottom"
+            android:backgroundTint="@color/coloracento"
+            android:fontFamily="@font/opensanslight"
+            android:text="Guardar"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.507"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.686" />
 
     </LinearLayout>
 </FrameLayout>

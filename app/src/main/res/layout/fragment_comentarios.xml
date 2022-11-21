@@ -33,6 +33,157 @@ android:orientation="vertical">
 
 </RelativeLayout>
 
+    <TextView
+        android:id="@+id/comentarios"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginLeft="23dp"
+        android:layout_marginTop="17dp"
+        android:text="Comentarios de tu tienda"
+        android:textColor="@color/coloracento"
+        android:textSize="23dp"
+        android:textStyle="bold"></TextView>
+
+    <TextView
+        android:id="@+id/comentarios1"
+        android:layout_width="235dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="23dp"
+        android:layout_marginTop="0dp"
+        android:text="Comentarios de tus ventas"
+        android:textColor="@color/colorletra"
+        android:textSize="18dp"></TextView>
+
+    <EditText
+        android:id="@+id/comentarios2"
+        android:layout_width="345dp"
+        android:layout_height="62dp"
+        android:layout_marginLeft="23dp"
+        android:layout_marginTop="0dp"
+        android:background="@drawable/stylo_borde_editext"
+        android:ems="10"
+        android:fontFamily="@font/opensanslight"
+        android:hint="Escribe aquí tus comentarios"
+        android:inputType="textEmailAddress"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.433" />
+    <TextView
+        android:id="@+id/comentarios3"
+        android:layout_width="362dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="23dp"
+        android:layout_marginTop="7dp"
+        android:text="Comentarios de tus productos"
+        android:textColor="@color/colorletra"
+        android:textSize="18dp"></TextView>
+
+    <EditText
+        android:id="@+id/comentarios4"
+        android:layout_width="345dp"
+        android:layout_height="62dp"
+        android:layout_marginLeft="23dp"
+        android:layout_marginTop="0dp"
+        android:background="@drawable/stylo_borde_editext"
+        android:ems="10"
+        android:fontFamily="@font/opensanslight"
+        android:hint="Escribe aquí tus comentarios"
+        android:inputType="textEmailAddress"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.433" />
+
+    <TextView
+        android:id="@+id/comentarios5"
+        android:layout_width="235dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="23dp"
+        android:layout_marginTop="7dp"
+        android:text="Comentarios de tus envíos"
+        android:textColor="@color/colorletra"
+        android:textSize="18dp"></TextView>
+
+    <EditText
+        android:id="@+id/comentarios6"
+        android:layout_width="345dp"
+        android:layout_height="62dp"
+        android:layout_marginLeft="23dp"
+        android:layout_marginTop="0dp"
+        android:background="@drawable/stylo_borde_editext"
+        android:ems="10"
+        android:fontFamily="@font/opensanslight"
+        android:hint="Escribe aquí tus comentarios"
+        android:inputType="textEmailAddress"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.433" />
+
+    <TextView
+        android:id="@+id/comentariosapp"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginLeft="23dp"
+        android:layout_marginTop="13dp"
+        android:text="Comentarios para mejorar nuestra APP"
+        android:textColor="@color/coloracento"
+        android:textSize="20dp"
+        android:textStyle="bold"></TextView>
+
+    <TextView
+        android:id="@+id/comentarios7"
+        android:layout_width="344dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="23dp"
+        android:layout_marginTop="0dp"
+        android:text="Que te gustaría mejorar de nuestra APP"
+        android:textColor="@color/colorletra"
+        android:textSize="18dp"></TextView>
+
+    <EditText
+        android:id="@+id/comentarios8"
+        android:layout_width="345dp"
+        android:layout_height="62dp"
+        android:layout_marginLeft="23dp"
+        android:layout_marginTop="0dp"
+        android:background="@drawable/stylo_borde_editext"
+        android:ems="10"
+        android:fontFamily="@font/opensanslight"
+        android:hint="Escribe aquí tus comentarios"
+        android:inputType="textEmailAddress"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.433" />
+
+    <Button
+        android:id="@+id/Bguardar"
+        android:layout_width="152dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="130dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/stylo_borde_bottom"
+        android:backgroundTint="@color/coloracento"
+        android:fontFamily="@font/opensanslight"
+        android:text="Guardar"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.686" />
 
 </LinearLayout>
     <com.google.android.material.bottomnavigation.BottomNavigationView
