@@ -31,6 +31,9 @@
         <action
             android:id="@+id/action_home2Fragment_to_loginActivity"
             app:destination="@id/loginActivity" />
+        <action
+            android:id="@+id/action_home2Fragment_to_comprasFragment"
+            app:destination="@id/comprasFragment" />
     </fragment>
     <fragment
         android:id="@+id/homeFragment"
@@ -181,4 +184,31 @@
         android:name="com.example.apptender2.view.ui.activities.LoginActivity"
         android:label="activity_login"
         tools:layout="@layout/activity_login" />
+    <fragment
+        android:id="@+id/comprasFragment"
+        android:name="com.example.apptender2.view.ui.fragments.comprasFragment"
+        android:label="fragment_compras"
+        tools:layout="@layout/fragment_compras" >
+        <action
+            android:id="@+id/action_comprasFragment_to_home2Fragment"
+            app:destination="@id/home2Fragment" />
+        <action
+            android:id="@+id/action_comprasFragment_to_home2Fragment2"
+            app:destination="@id/home2Fragment" />
+        <action
+            android:id="@+id/action_comprasFragment_to_listaTiendaFragment"
+            app:destination="@id/listaTiendaFragment" />
+        <action
+            android:id="@+id/action_comprasFragment_to_listaTiendaFragment2"
+            app:destination="@id/listaTiendaFragment" />
+        <action
+            android:id="@+id/action_comprasFragment_to_listaTiendaFragment3"
+            app:destination="@id/listaTiendaFragment" />
+        <action
+            android:id="@+id/action_comprasFragment_to_mapasFragment"
+            app:destination="@id/mapasFragment" />
+        <action
+            android:id="@+id/action_comprasFragment_to_misdatosFragment"
+            app:destination="@id/misdatosFragment" />
+    </fragment>
 </navigation>

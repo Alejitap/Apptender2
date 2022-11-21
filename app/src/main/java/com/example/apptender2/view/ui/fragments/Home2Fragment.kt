@@ -1,11 +1,11 @@
 package com.example.apptender2.view.ui.fragments
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.apptender2.R
 
@@ -35,9 +35,9 @@ class Home2Fragment : Fragment() {
             findNavController().navigate(R.id.action_home2Fragment_to_listaTiendaFragment)
 
         }
-        val cardConfiguracion = view.findViewById<ImageView>(R.id.Mconfiguracion)
+        val cardConfiguracion = view.findViewById<ImageView>(R.id.Carrito)
         cardConfiguracion.setOnClickListener {
-            findNavController().navigate(R.id.action_home2Fragment_to_configuracionFragment)
+            findNavController().navigate(R.id.action_home2Fragment_to_comprasFragment)
 
         }
         val cardComentarios = view.findViewById<ImageView>(R.id.Mcomentarios)

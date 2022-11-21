@@ -103,7 +103,7 @@
                         <ImageView
                             android:layout_width="100dp"
                             android:layout_height="100dp"
-                            android:src="@drawable/carro"
+                            android:src="@drawable/pedidos3"
                             android:id="@+id/CTienda">
                         </ImageView>
                     </LinearLayout>
@@ -138,7 +138,7 @@
                         <ImageView
                             android:layout_width="100dp"
                             android:layout_height="100dp"
-                            android:src="@drawable/tienda"
+                            android:src="@drawable/carro"
                             android:id="@+id/cardTienda">
                         </ImageView>
                     </LinearLayout>
@@ -166,15 +166,15 @@
                             android:textSize="20dp"
                             android:textStyle="bold"
                             android:textAlignment="center"
-                            android:text="Configuracion">
+                            android:text="Carrito">
                         </TextView>
 
                         <ImageView
 
-                            android:layout_width="100dp"
-                            android:id="@+id/Mconfiguracion"
+                            android:layout_width="130dp"
+                            android:id="@+id/Carrito"
                             android:layout_height="100dp"
-                            android:src="@drawable/ajustes">
+                            android:src="@drawable/carrito2">
 
                         </ImageView>
 

@@ -3,9 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".view.ui.fragments.comprasFragment">
 
     <RelativeLayout
+
         android:layout_width="match_parent"
         android:layout_height="110dp"
         android:layout_marginLeft="20dp"
@@ -21,13 +23,49 @@
         </ImageView>
 
     </RelativeLayout>
+
+    <TextView
+        android:layout_width="208dp"
+        android:id="@+id/preciototal"
+        android:layout_height="55dp"
+        android:background="@color/colorfondo"
+        android:layout_marginTop="160dp"
+        android:text="0"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:textSize="20dp">
+    </TextView>
+
+    <TextView
+        android:layout_width="208dp"
+        android:id="@+id/realizar"
+        android:layout_height="55dp"
+        android:background="@color/colorfondo2"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="160dp"
+        android:text="Compra"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:textSize="20dp">
+    </TextView>
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="155dp"
+        android:layout_marginTop="250dp"
         android:id="@+id/recyclerviewcompras">
 
     </androidx.recyclerview.widget.RecyclerView>
 
-
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/buttonnavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="700dp"
+        android:background="@color/colorsecundario"
+        android:backgroundTint="@color/white"
+        app:itemIconTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/menu_navigation_bar"
+        tools:ignore="MissingConstrains">
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
 </FrameLayout>

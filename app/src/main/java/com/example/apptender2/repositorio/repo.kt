@@ -29,15 +29,15 @@ class repo {
 
     fun getComprasData():LiveData<MutableList<compras>>{
         val mutabledata=MutableLiveData<MutableList<compras>>()
-
-    FirebaseFirestore.getInstance().collection("compras").get()
-        .addOnSuccessListener { result ->
+    FirebaseFirestore.getInstance().collection("compras")
+        .get().addOnSuccessListener {
+                result ->
             val listData = mutableListOf<compras>()
             for (document in result) {
-                val title = document.getString("title")
+                val titulo = document.getString("titulo")
                 val precio = document.getString("precio")
                 val image = document.getString("image")
-                val compra = compras(title!!, precio!!, image!!)
+                val compra = compras(titulo!!, precio!!, image!!)
                 listData.add(compra)
             }
 
