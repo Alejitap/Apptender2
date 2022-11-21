@@ -8,6 +8,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.EditText
+import android.widget.ImageButton
 import android.widget.ImageView
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
@@ -23,6 +25,17 @@ class misdatosFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view= inflater.inflate(R.layout.fragment_misdatos, container, false)
+        val nombrecompleto=view.findViewById<EditText>(R.id.nombrecompleto)
+        val btmeditnombre=view.findViewById<ImageButton>(R.id.edicionnombre)
+        nombrecompleto.isEnabled=false
+        btmeditnombre.setOnClickListener {
+            if (nombrecompleto.isEnabled==false) {
+                nombrecompleto.isEnabled = true
+            }else if (nombrecompleto.isEnabled==true){
+                nombrecompleto.isEnabled=false
+        }
+
+}
 
         val btmcamara=view.findViewById<Button>(R.id.btmcamara)
         btmcamara.setOnClickListener {

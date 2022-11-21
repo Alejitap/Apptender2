@@ -8,34 +8,33 @@ import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.example.apptender2.R
-import com.example.apptender2.model.productos
+import com.example.apptender2.model.compras
 import com.squareup.picasso.Picasso
 
+class ComprasAdapter (private val context: Context, var clickListener: OnCompraItemClickListener):
+    RecyclerView.Adapter<ComprasAdapter.ViewHolder> (){
 
+    private var productolista= mutableListOf<compras>()
 
-class tiendaAdapter(private val context: Context,var clickListener: OnBookItemClickListener):RecyclerView.Adapter<tiendaAdapter.ViewHolder> (){
-
-    private var productolista= mutableListOf<productos>()
-
-    fun setListData(data:MutableList<productos>){
+    fun setListData(data:MutableList<compras>){
         productolista=data
 
     }
 
-    override fun onCreateViewHolder(viewGroup:ViewGroup,i: Int):ViewHolder {
+    override fun onCreateViewHolder(viewGroup: ViewGroup, i: Int):ViewHolder {
 
-        val v=LayoutInflater.from(viewGroup.context).inflate(R.layout.card_view_tienda,viewGroup,false)
+        val v=
+            LayoutInflater.from(viewGroup.context).inflate(R.layout.card_view_compras,viewGroup,false)
         return ViewHolder (v)
     }
-    inner class  ViewHolder (ItemView: View):RecyclerView.ViewHolder(ItemView) {
-        fun binWew(product:productos,action:OnBookItemClickListener) {
+    inner class  ViewHolder (ItemView: View): RecyclerView.ViewHolder(ItemView) {
+        fun binWew(product: compras, action:OnCompraItemClickListener) {
             itemView.findViewById<TextView>(R.id.title).text = product.title
             itemView.findViewById<TextView>(R.id.Precio).text=product.precio
             Picasso.with(context).load(product.image).into(itemView.findViewById<ImageView>(R.id.image))
-            val btncarrito=itemView.findViewById<ImageButton>(R.id.carrito)
-            btncarrito.setOnClickListener {
+            val btneliminar=itemView.findViewById<ImageButton>(R.id.eliminar)
+            btneliminar.setOnClickListener {
                 action.onItemcLick(product,adapterPosition)
             }
 
@@ -56,6 +55,6 @@ class tiendaAdapter(private val context: Context,var clickListener: OnBookItemCl
     }
 }
 
-interface OnBookItemClickListener {
-    fun onItemcLick (product: productos,position:Int)
+interface OnCompraItemClickListener {
+    fun onItemcLick (product: compras, position:Int)
 }

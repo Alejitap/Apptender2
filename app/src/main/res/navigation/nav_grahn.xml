@@ -116,7 +116,20 @@
         android:id="@+id/comentariosFragment"
         android:name="com.example.apptender2.view.ui.fragments.comentariosFragment"
         android:label="fragment_comentarios"
-        tools:layout="@layout/fragment_comentarios" />
+        tools:layout="@layout/fragment_comentarios" >
+        <action
+            android:id="@+id/action_comentariosFragment_to_home2Fragment"
+            app:destination="@id/home2Fragment" />
+        <action
+            android:id="@+id/action_comentariosFragment_to_mapasFragment"
+            app:destination="@id/mapasFragment" />
+        <action
+            android:id="@+id/action_comentariosFragment_to_misdatosFragment"
+            app:destination="@id/misdatosFragment" />
+        <action
+            android:id="@+id/action_comentariosFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
     <fragment
         android:id="@+id/configuracionFragment"
         android:name="com.example.apptender2.configuracionFragment"

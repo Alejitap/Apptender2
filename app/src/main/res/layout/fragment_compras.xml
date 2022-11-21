@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.ui.fragments.comprasFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/theme_gradiants_background">
+
+        <ImageView
+            android:layout_width="400dp"
+            android:layout_height="400dp"
+            android:id="@+id/CTienda"
+            android:src="@drawable/logo">
+        </ImageView>
+
+    </RelativeLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="155dp"
+        android:id="@+id/recyclerviewcompras">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+</FrameLayout>

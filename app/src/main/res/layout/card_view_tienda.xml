@@ -39,8 +39,7 @@ android:padding="16dp">
         android:layout_toRightOf="@id/title"
         android:layout_alignParentTop="true"
         android:textSize="20dp"
-        android:id="@+id/title"
-        >
+        android:id="@+id/title" >
 
     </TextView>
 
@@ -59,6 +58,18 @@ android:padding="16dp">
 >
 
     </TextView>
+    <ImageButton
+        android:id="@+id/carrito"
+        android:layout_width="40dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="100dp"
+        android:layout_toRightOf="@+id/Precio"
+        android:src="@drawable/ic_baseline_shopping_cart_24"
+        android:background="@color/white">
+
+    </ImageButton>
+
+
 </RelativeLayout>
 
 

@@ -56,7 +56,6 @@
         android:backgroundTint="@color/colorfondo"
         android:text="Cámara"
         android:textSize="10dp"
-
         android:textStyle="bold">
     </Button>
     <Button
@@ -70,6 +69,24 @@
         android:text="Galeria"
         android:textStyle="bold">
     </Button>
+    <EditText
+        android:id="@+id/nombrecompleto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="140dp"
+        android:text="Alejandro Posse"
+        android:textIsSelectable="false"
+        android:layout_marginTop="610dp">
+    </EditText>
+    <ImageButton
+        android:id="@+id/edicionnombre"
+        android:layout_width="47dp"
+        android:layout_height="33dp"
+        android:layout_marginLeft="310dp"
+        android:layout_marginTop="610dp"
+        android:src="@drawable/editar">
+    </ImageButton>
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/buttonnavigation"
         android:layout_width="match_parent"
@@ -80,8 +97,7 @@
         app:itemIconTint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:menu="@menu/menu_navigation_bar"
-        tools:ignore="MissingConstrains"
-        >
+        tools:ignore="MissingConstrains"        >
     </com.google.android.material.bottomnavigation.BottomNavigationView>
 </FrameLayout>
 
