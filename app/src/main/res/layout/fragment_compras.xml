@@ -9,7 +9,7 @@
     <RelativeLayout
 
         android:layout_width="match_parent"
-        android:layout_height="110dp"
+        android:layout_height="100dp"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="32dp"
         android:layout_marginRight="20dp"
@@ -24,37 +24,92 @@
 
     </RelativeLayout>
 
-    <TextView
-        android:layout_width="208dp"
-        android:id="@+id/preciototal"
-        android:layout_height="55dp"
-        android:background="@color/colorfondo"
-        android:layout_marginTop="160dp"
-        android:text="0"
-        android:textColor="@color/white"
-        android:textAlignment="center"
-        android:textSize="20dp">
-    </TextView>
-
-    <TextView
-        android:layout_width="208dp"
-        android:id="@+id/realizar"
-        android:layout_height="55dp"
-        android:background="@color/colorfondo2"
-        android:layout_marginLeft="200dp"
-        android:layout_marginTop="160dp"
-        android:text="Compra"
-        android:textColor="@color/white"
-        android:textAlignment="center"
-        android:textSize="20dp">
-    </TextView>
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="250dp"
+        android:layout_height="450dp"
+        android:layout_marginTop="130dp"
         android:id="@+id/recyclerviewcompras">
-
     </androidx.recyclerview.widget.RecyclerView>
+
+    <TextView
+        android:layout_width="180dp"
+        android:id="@+id/preciototal"
+        android:layout_height="30dp"
+        android:layout_marginTop="580dp"
+        android:text="0"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:layout_marginLeft="210dp"
+        android:textSize="10dp">
+    </TextView>
+
+    <TextView
+        android:layout_width="180dp"
+        android:id="@+id/iva"
+        android:layout_height="30dp"
+        android:layout_marginTop="600dp"
+        android:text="0"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:layout_marginLeft="210dp"
+        android:textSize="10dp">
+    </TextView>
+    <TextView
+        android:layout_width="180dp"
+        android:id="@+id/totalcompra"
+        android:layout_height="30dp"
+        android:layout_marginTop="620dp"
+        android:text="0"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:layout_marginLeft="210dp"
+        android:textSize="10dp">
+    </TextView>
+
+    <TextView
+        android:layout_width="180dp"
+        android:id="@+id/preciototal1"
+        android:layout_height="30dp"
+        android:layout_marginTop="580dp"
+        android:text="Valor Compra"
+        android:textColor="@color/black"
+        android:layout_marginLeft="20dp"
+        android:textSize="10dp">
+    </TextView>
+
+    <TextView
+        android:layout_width="180dp"
+        android:id="@+id/iva1"
+        android:layout_height="30dp"
+        android:layout_marginTop="600dp"
+        android:text="Iva"
+        android:textColor="@color/black"
+        android:layout_marginLeft="20dp"
+        android:textSize="10dp">
+    </TextView>
+    <TextView
+        android:layout_width="180dp"
+        android:id="@+id/totalcompraiva"
+        android:layout_height="30dp"
+        android:layout_marginTop="620dp"
+        android:text="Total Compra incluido IVA"
+        android:textColor="@color/black"
+        android:layout_marginLeft="20dp"
+        android:textSize="10dp">
+    </TextView>
+
+    <Button
+        android:layout_width="180dp"
+        android:id="@+id/realizar"
+        android:layout_height="30dp"
+        android:background="@color/colorletra"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="650dp"
+        android:text="Comprar"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:textSize="9dp">
+    </Button>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/buttonnavigation"

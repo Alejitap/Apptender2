@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
@@ -28,7 +29,9 @@ class comprasFragment : Fragment(), OnCompraItemClickListener {
     lateinit var adapter: ComprasAdapter
     private lateinit var firebaseAuth: FirebaseAuth
     lateinit var precioT: TextView
-    lateinit var compraT: TextView
+    lateinit var compraT: Button
+    lateinit var valoriva: TextView
+
     val database: FirebaseFirestore = FirebaseFirestore.getInstance()
     private val viewModel by lazy { ViewModelProvider(this).get(ComprasViewModel::class.java) }
 
@@ -40,11 +43,13 @@ class comprasFragment : Fragment(), OnCompraItemClickListener {
         recyclerView = view.findViewById(R.id.recyclerviewcompras)
         precioT=view.findViewById(R.id.preciototal)
         compraT=view.findViewById(R.id.realizar)
+        valoriva=view.findViewById(R.id.iva)
         adapter = ComprasAdapter(requireContext(), this)
         recyclerView.layoutManager = LinearLayoutManager(context)
         recyclerView.adapter = adapter
         observerData()
         preciototal()
+
         compraT.setOnClickListener{
             realizarcompra()
         }
@@ -75,6 +80,7 @@ class comprasFragment : Fragment(), OnCompraItemClickListener {
                 precioT.setText(Integer.toString(preciototal))
             }
     }
+
 
 private fun realizarcompra(){
     val builder=AlertDialog.Builder(requireContext())

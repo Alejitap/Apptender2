@@ -133,12 +133,12 @@
                             android:textSize="20dp"
                             android:textStyle="bold"
                             android:textAlignment="center"
-                            android:text="Tienda">
+                            android:text="Productos">
                         </TextView>
                         <ImageView
                             android:layout_width="100dp"
                             android:layout_height="100dp"
-                            android:src="@drawable/carro"
+                            android:src="@drawable/frutasyverduras"
                             android:id="@+id/cardTienda">
                         </ImageView>
                     </LinearLayout>
