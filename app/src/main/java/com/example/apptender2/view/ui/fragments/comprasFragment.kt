@@ -31,6 +31,7 @@ class comprasFragment : Fragment(), OnCompraItemClickListener {
     lateinit var precioT: TextView
     lateinit var compraT: Button
     lateinit var valoriva: TextView
+    lateinit var valorComprat: TextView
 
     val database: FirebaseFirestore = FirebaseFirestore.getInstance()
     private val viewModel by lazy { ViewModelProvider(this).get(ComprasViewModel::class.java) }
@@ -44,11 +45,15 @@ class comprasFragment : Fragment(), OnCompraItemClickListener {
         precioT=view.findViewById(R.id.preciototal)
         compraT=view.findViewById(R.id.realizar)
         valoriva=view.findViewById(R.id.iva)
+        valorComprat=view.findViewById(R.id.totalcompra)
         adapter = ComprasAdapter(requireContext(), this)
         recyclerView.layoutManager = LinearLayoutManager(context)
         recyclerView.adapter = adapter
         observerData()
         preciototal()
+        calculariva()
+        calculartotaliva ()
+
 
         compraT.setOnClickListener{
             realizarcompra()
@@ -81,6 +86,42 @@ class comprasFragment : Fragment(), OnCompraItemClickListener {
             }
     }
 
+    // funcion calcular iva
+
+    private fun calculariva(){
+        database.collection("compras")
+            .get()
+            .addOnSuccessListener {
+                    result->
+                val preciounitarioi= mutableListOf<String>()
+                for (document in result){
+                    val precioi=document["precio"].toString()
+                    preciounitarioi.add(precioi!!)
+                }
+                val preciototali=preciounitarioi.mapNotNull { it.toIntOrNull()}.sum()
+                val porcentajeiva= 0.19
+                valoriva.setText(Integer.toString((preciototali*porcentajeiva).toInt()))
+            }
+    }
+// funcion calcular iva
+
+    private fun calculartotaliva(){
+        database.collection("compras")
+            .get()
+            .addOnSuccessListener {
+                    result->
+                val preciounitarioii= mutableListOf<String>()
+                for (document in result){
+                    val precioii=document["precio"].toString()
+                    preciounitarioii.add(precioii!!)
+                }
+                val preciototali=preciounitarioii.mapNotNull { it.toIntOrNull()}.sum()
+                val porcentajeivaincluido= 1.19
+                valorComprat.setText(Integer.toString((preciototali*porcentajeivaincluido).toInt()))
+            }
+    }
+
+
 
 private fun realizarcompra(){
     val builder=AlertDialog.Builder(requireContext())
@@ -98,6 +139,7 @@ dialog,which->
 database.collection("compras")
     .document(product.title)
     .delete()
+
     }
 
 
